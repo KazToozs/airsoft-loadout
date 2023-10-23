@@ -1,0 +1,193 @@
+.home-container {
+    display: flex;  // Use Flexbox
+    height: calc(100vh - 60px); // 100% of viewport height - the navbar
+
+    .gear-selection-menu {
+        flex: 2;  // Each section will take half of the available space
+    }
+
+    .gear-preview {
+        flex: 3;
+        background-color: #e0e0e0;  // Example background color
+        flex-direction: column;
+        display: flex;
+        .preview-mannequin-window {
+            flex: 2; // Each section will take half of the available space
+            background-color: #b39ddb;  // Example background color
+            position: relative; // Make this relative so children can be positioned inside
+
+            .preview-mannequin {
+                position: absolute;
+                top: 10%;
+                left: 35%;
+                height: 80%;
+                width: 25%;
+
+                background-color: rgba(255, 127, 85, 0.333);
+                border: 1px solid #ddd;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+                // .mannequin-head {
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     height: 100%;
+                //     width: 100%;
+                //     background-color: #ddd;
+                //     border-radius: 4px;
+                // }
+
+                // .mannequin-body {
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     height: 100%;
+                //     width: 100%;
+                //     background-color: #ddd;
+                //     border-radius: 4px;
+                // }
+
+                // .mannequin-legs {
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     height: 100%;
+                //     width: 100%;
+                //     background-color: #ddd;
+                //     border-radius: 4px;
+                // }
+            }
+
+            .weapon-previews {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 0;
+                right: 0;
+                height: 50%;
+                width: 25%;
+
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
+            }
+        }
+        .preview-gear-selection {
+            flex: 1; // Each section will take half of the available space
+            background-color: #c5cae9;  // Example background color
+            flex-direction: row;
+            display: flex;
+            .selection-tactical {
+                flex: 2;
+                justify-content: center;
+                background-color: #e8eaf6;  // Example background color
+                padding: 10px;
+            }
+
+            .selection-items {
+                flex: 1;
+                padding: 10px;
+                background-color: rgba(179, 128, 179, 0.667);  // Example background color
+            }
+
+            .selection-clothing {
+                flex: 1;
+                padding: 10px;
+
+                background-color: rgb(136, 238, 166);  // Example background color
+            }
+        }
+
+    }
+
+    .gear-selection-menu {
+        background-color: #d1c4e9;  // Example background color
+
+        display: flex;
+        flex-direction: column; // Stack children vertically
+
+        .selection-header {
+            flex: 1; // Each section will take half of the available space
+            background-color: #c5cae9;  // Example background color
+            display: flex;
+            align-items: center;  /* Vertically aligns the items */
+            justify-content: center; /* Keeps space between logo and list */
+            padding: 10px;
+            .loadout-preset-selector {
+                background-color: #50798a;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .selection-checkout {
+            flex: 1; // Equally divide the remaining space (after the middle section takes 80%)
+            background-color: #bbb; // Sample background color for differentiation
+            display: flex;
+            align-items: center;  /* Vertically aligns the items */
+            justify-content: space-between; /* Keeps space between logo and list */
+            padding: 10px;
+
+            .checkout-button {
+                background-color: #50798a;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .save-loadout {
+                background-color: #50798a;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .selection-list {
+            flex: 8; // Take up 8 parts out of a total of 10
+            background-color: #aaa; // Sample background color for differentiation
+
+            ul {
+                list-style-type: none; // Removes the bullet points
+                margin: 0; // Removes default margin
+                padding: 5px 0 0 10px; // Removes default padding
+                border: 1px solid #ccc;
+
+            }
+
+            .selection-list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .accordion-subcomponent {
+                display: none;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-top: none;
+            }
+            
+            .selection-list-item.active .accordion-subcomponent {
+                display: block;
+            }
+        }
+
+          
+          
+
+    }
+}

@@ -1,0 +1,35 @@
+.navbar {
+
+    height: 40px;
+    background-color: #50798a;
+    color: #fff;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+    padding: 10px; // Adding some padding for better appearance
+
+    .navbar-logo {
+        height: 100%;
+        width: 100%;
+        max-width: 100px;
+        background-color: #ddd;
+        border-radius: 4px;
+    }
+
+    ul {
+        display: flex; // Aligns the li items horizontally
+        list-style-type: none; // Removes the bullet points
+        margin: 0; // Removes default margin
+        padding: 0; // Removes default padding
+        align-items: center; // Vertically center the li items
+        height: 100%; // Takes the full height of the navbar
+    }
+
+    li {
+        margin: 0 15px; // Adds some space between the li items
+        color: white; // Text color, change as needed
+    }
+}
