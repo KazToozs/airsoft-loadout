@@ -1,19 +1,20 @@
 .home-container {
-    display: flex;  // Use Flexbox
+    display: flex; // Use Flexbox
     height: calc(100vh - 60px); // 100% of viewport height - the navbar
 
     .gear-selection-menu {
-        flex: 2;  // Each section will take half of the available space
+        flex: 2; // Each section will take half of the available space
     }
 
     .gear-preview {
         flex: 3;
-        background-color: #e0e0e0;  // Example background color
+        background-color: #e0e0e0; // Example background color
         flex-direction: column;
         display: flex;
+
         .preview-mannequin-window {
             flex: 2; // Each section will take half of the available space
-            background-color: #b39ddb;  // Example background color
+            background-color: #b39ddb; // Example background color
             position: relative; // Make this relative so children can be positioned inside
 
             .preview-mannequin {
@@ -74,47 +75,52 @@
 
             }
         }
+
         .preview-gear-selection {
             flex: 1; // Each section will take half of the available space
-            background-color: #c5cae9;  // Example background color
+            background-color: #c5cae9; // Example background color
             flex-direction: row;
             display: flex;
+
             .selection-tactical {
                 flex: 2;
                 justify-content: center;
-                background-color: #e8eaf6;  // Example background color
+                background-color: #e8eaf6; // Example background color
                 padding: 10px;
             }
 
             .selection-items {
                 flex: 1;
                 padding: 10px;
-                background-color: rgba(179, 128, 179, 0.667);  // Example background color
+                background-color: rgba(179, 128, 179, 0.667); // Example background color
             }
 
             .selection-clothing {
                 flex: 1;
                 padding: 10px;
 
-                background-color: rgb(136, 238, 166);  // Example background color
+                background-color: rgb(136, 238, 166); // Example background color
             }
         }
 
     }
 
     .gear-selection-menu {
-        background-color: #d1c4e9;  // Example background color
+        background-color: #d1c4e9; // Example background color
 
         display: flex;
         flex-direction: column; // Stack children vertically
 
         .selection-header {
             flex: 1; // Each section will take half of the available space
-            background-color: #c5cae9;  // Example background color
+            background-color: #c5cae9; // Example background color
             display: flex;
-            align-items: center;  /* Vertically aligns the items */
-            justify-content: center; /* Keeps space between logo and list */
+            align-items: center;
+            /* Vertically aligns the items */
+            justify-content: center;
+            /* Keeps space between logo and list */
             padding: 10px;
+
             .loadout-preset-selector {
                 background-color: #50798a;
                 color: #fff;
@@ -130,8 +136,10 @@
             flex: 1; // Equally divide the remaining space (after the middle section takes 80%)
             background-color: #bbb; // Sample background color for differentiation
             display: flex;
-            align-items: center;  /* Vertically aligns the items */
-            justify-content: space-between; /* Keeps space between logo and list */
+            align-items: center;
+            /* Vertically aligns the items */
+            justify-content: space-between;
+            /* Keeps space between logo and list */
             padding: 10px;
 
             .checkout-button {
@@ -143,6 +151,7 @@
                 font-size: 16px;
                 cursor: pointer;
             }
+
             .save-loadout {
                 background-color: #50798a;
                 color: #fff;
@@ -157,10 +166,38 @@
         .selection-list {
             flex: 8; // Take up 8 parts out of a total of 10
             background-color: #aaa; // Sample background color for differentiation
-        }        
+            overflow: scroll;
 
-          
-          
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        .selection-list::-webkit-scrollbar {
+            width: 10px;
+            height: 0;
+            background: transparent;
+            /* Chrome & Safari */
+        }
+
+        .selection-list::-webkit-scrollbar-track {
+            border-radius: px;
+            background: #c9cacc;
+        }
+
+        .selection-list::-webkit-scrollbar-track:hover {
+            background: #78797a;
+        }
+
+        .selection-list::-webkit-scrollbar-thumb {
+            background: #3d5585;
+            border-radius: 10px;
+        }
+
+        .selection-list::-webkit-scrollbar-thumb:hover {
+            background: #01143b;
+        }
 
     }
 }

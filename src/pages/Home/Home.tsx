@@ -31,7 +31,7 @@ function Home() {
       </section>
       <section className="gear-selection-menu">
         <div className="selection-header">
-          
+
 
           <select className="loadout-preset-selector">
             <option value="" disabled>Select an option</option>
@@ -43,7 +43,10 @@ function Home() {
 
         </div>
         <div className="selection-list">
-          <ItemListAccordion/>
+          <ItemListAccordion title="EXAMPLE" />
+          <ItemListAccordion title="EXAMPLE" />
+          <ItemListAccordion title="EXAMPLE" />
+
         </div>
         <div className="selection-checkout">
           <div className="save-loadout">SAVE_LOADOUT</div>

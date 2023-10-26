@@ -1,27 +1,43 @@
 import React, { useState } from 'react';
 import './ItemListAccordion.scss';
+import ItemCard from '../ItemCard/ItemCard';
 
-function ItemListAccordion() {
+interface ItemListAccordionProps {
+    title: string;
+}
 
-    // accordion for gear selection list
-    const [isActive, setIsActive] = useState(false);
-
-    const toggleAccordion = () => {
-        setIsActive(!isActive);
-    }
+const ItemListAccordion = ({ title }: ItemListAccordionProps) => {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-          <ul>
-            <li className={`selection-list-item ${isActive ? 'active' : ''}`} onClick={toggleAccordion}>
-              <span>EXAMPLE</span>
-              <button>
-                {isActive ? '▲' : '▼'}
-              </button>
-            </li>
-            {isActive && <div className="accordion-subcomponent">
-              This is the accordion content.
-            </div>}
-          </ul>
+        <div className="accordion">
+            <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
+                {title}
+                <span className="indicator">{isOpen ? '-' : '+'}</span>
+            </div>
+            <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+
+            </div>
+        </div>
     );
 }
 
