@@ -157,34 +157,7 @@
         .selection-list {
             flex: 8; // Take up 8 parts out of a total of 10
             background-color: #aaa; // Sample background color for differentiation
-
-            ul {
-                list-style-type: none; // Removes the bullet points
-                margin: 0; // Removes default margin
-                padding: 5px 0 0 10px; // Removes default padding
-                border: 1px solid #ccc;
-
-            }
-
-            .selection-list-item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-                cursor: pointer;
-            }
-
-            .accordion-subcomponent {
-                display: none;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-top: none;
-            }
-            
-            .selection-list-item.active .accordion-subcomponent {
-                display: block;
-            }
-        }
+        }        
 
           
           

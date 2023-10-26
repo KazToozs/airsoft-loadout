@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none; // Removes the bullet points
+    margin: 0; // Removes default margin
+    padding: 5px 0 0 10px; // Removes default padding
+    border: 1px solid #ccc;
+
+}
+
+.selection-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-subcomponent {
+    padding: 10px;
+}

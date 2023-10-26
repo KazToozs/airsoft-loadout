@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Home.scss';
 import WeaponDisplay from '../../components/WeaponDisplay/WeaponDisplay';
+import ItemListAccordion from '../../components/ItemListAccordion/ItemListAccordion';
 
 function Home() {
-
-  // accordion for gear selection list
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsActive(!isActive);
-  }
-
 
   return (
     <div className="home-container">
@@ -50,17 +43,7 @@ function Home() {
 
         </div>
         <div className="selection-list">
-          <ul>
-            <li className={`selection-list-item ${isActive ? 'active' : ''}`} onClick={toggleAccordion}>
-              <span>EXAMPLE</span>
-              <button>
-                {isActive ? '▲' : '▼'}
-              </button>
-            </li>
-            <div className="accordion-subcomponent">
-              This is the accordion content.
-            </div>
-          </ul>
+          <ItemListAccordion/>
         </div>
         <div className="selection-checkout">
           <div className="save-loadout">SAVE_LOADOUT</div>
